@@ -106,7 +106,7 @@ cd Ansible;export ANSIBLE_SSH_RETRIES=10 && ansible-playbook config-test-app.yml
 ```deploy_app.sh``` shell script runs both infrastructure provisioning terraform code and ansible playbook sequentially. So it deploys whole application on a single run.
 In the middle of the run it requests for a AWS credentials. 
 
-<span style="color: red"> In the first run it deploys the application and in the second run it deleting the application. </span>
+In the ```first run``` it ```deploys``` the application and in the ```second run``` it ```deleting``` the application.
 
 After a completion of the run, It displays public ip of the host in the output. You can directly put it on a web browser to access the nginx web service or for the api server accessing curl requests.
 
