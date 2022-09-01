@@ -1,0 +1,9 @@
+[Unit]
+Description=Nginx Watcher
+After=network-online.target
+
+[Service]
+ExecStart=/etc/nginx-watcher/nginx-watcher-starter.sh
+
+[Install]
+WantedBy=multi-user.target

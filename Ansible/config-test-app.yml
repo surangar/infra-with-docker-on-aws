@@ -1,0 +1,11 @@
+---
+  - name: configure test
+    hosts: all
+    remote_user: ubuntu
+    become: true
+    roles:
+        - install-docker
+        - run-nginx
+        - nginx-watcher
+        - log-search-api
+        - iptables

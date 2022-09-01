@@ -1,0 +1,17 @@
+  - name: Create Nginx Watcher Folder
+    shell: "mkdir -p /etc/nginx-watcher"
+
+  - name: Copy watcher script
+    copy:
+      src: files/nginx-watcher.sh
+      dest: /etc/nginx-watcher/nginx-watcher.sh
+      mode: 0775
+
+  - name: Copy nginx watcher starter script
+    copy:
+      src: files/nginx-watcher-starter.sh
+      dest: /etc/nginx-watcher/nginx-watcher-starter.sh
+      mode: 0775
+  
+  - name: Restart Nginx Watcher Service
+    shell: "/etc/nginx-watcher/nginx-watcher-starter.sh restart"

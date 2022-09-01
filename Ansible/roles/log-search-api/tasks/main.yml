@@ -1,0 +1,9 @@
+  - name: deploy log search api docker container
+    docker_container:
+      image: sesirir/log-search-api:latest
+      name: log-search-api
+      state: started
+      auto_remove: true
+      volumes: /var/log:/var/log/search-api
+      ports:
+        - "8090:80"

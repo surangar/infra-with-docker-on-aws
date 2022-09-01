@@ -1,0 +1,9 @@
+    - name: deploy nginx docker container
+      docker_container:
+        image: nginx:stable
+        name: nginx
+        state: started
+        auto_remove: true
+        volumes: /var/log:/usr/share/nginx/html
+        ports:
+          - "80:80"
