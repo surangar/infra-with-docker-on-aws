@@ -1,7 +1,7 @@
 #access_key              = " "
 #secret_key              = " "
-#region                  = "ap-southeast-2"
 
+region                  = "ap-southeast-2"
 name                    = "TEST-APP"  
 azs                     = ["ap-southeast-2a","ap-southeast-2b"]
 vpc_cidr                = "172.20.0.0/16"
