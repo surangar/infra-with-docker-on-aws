@@ -114,3 +114,10 @@ you can run deployment shell script as below.
 ```
 ./deploy_app.sh 
 ```
+
+
+# Risks can have with this implementation.
+
+* This is not hosted in private subnet. Therefore better to put servers behind the ELB and put on a private subnet.
+* Since this is hosted on single ec2 instance and single container it's not scalable and highly available.
+* Since logs are writing in every ten seconds better to do log rotation. Otherwise storage will fill within a day of run.
