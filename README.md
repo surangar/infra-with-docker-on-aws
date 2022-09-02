@@ -87,11 +87,20 @@ sesirir/log-search-api:latest
 ```
 It works as an api server and you can search an entry on log file written by "nginx-watcher" script with curl command as below.
 ```
- curl -X POST -H “Content-Type: application/json” PUBLIC_IP:8090/getlogs -F 'date=ANY_TIME_STAMP_SHOWING_ON_LOG'
+ curl -X POST -H “Content-Type: application/json” PUBLIC_IP:8090/getlogs -F 'key=ANY_STRING_NEED_TO_SEARCH_ON_LOG'
 
  Ex: 
- curl -X POST -H “Content-Type: application/json” 52.62.22.15:8090/getlogs -F 'date=20220901_120903'
+ curl -X POST -H “Content-Type: application/json” 52.62.22.15:8090/getlogs -F 'key=20220901_120903'
 ```
+
+Also you can access a help page for the API server as below which shows all the api routes.
+
+```
+http://PUBLIC_IP:8090
+```
+![Help Page](images/help_page.png)
+
+
 ### iptables
 This role blocks all unwanted connections from OS level. It allows only a few ports ```(80,443,22,8090) ```. But not totally blocking internet access capability of the host machine since it accessing docker hub and some other sources.
 
